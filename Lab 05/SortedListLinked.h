@@ -6,6 +6,7 @@
 
 #include <iostream>
 using namespace std;
+using 
 
 template < class T >
 class SortedListLinked
@@ -104,15 +105,18 @@ NextNode<T>** SortedListLinked<T>::find(T* item)
 
    //DO THIS
    //loop to find the correct location to insert/remove item
-
-
-
-
-
-
-
-
-
+   while(curr != NULL && curr->item != item)
+	   curr = curr->getNext();
+   
+   if(curr != NULL)
+   {
+	   prev = curr;
+	   curr = curr->getNext();
+	   return curr;
+   }
+   else
+	   return prev;
+   
    //could simply return prev and compute curr, but prev might be null
    //this way results in somewhat simpler code in add and remove
    NextNode<T>** nodes = new NextNode<T>*[2];
@@ -142,7 +146,7 @@ void SortedListLinked<T>::add(T* item)
 
    //DO THIS
    //adding to the top of the list (check prev)
-   if (           )
+   if (NextNode)
    {
 
 
