@@ -146,19 +146,15 @@ void SortedListLinked<T>::add(T* item)
 
    //DO THIS
    //adding to the top of the list (check prev)
-   if (NextNode)
+   if (prev == NULL)
    {
-
-
-
-
+	   node->getNext() = head;
+	   head = node;	   
    }
    else    //general add
    {
-
-
-
-
+	   node->getNext() = new NextNode<T>(item);
+	   
    }
 
    sze++;
