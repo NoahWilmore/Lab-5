@@ -128,41 +128,7 @@ NextNode<T>** SortedListLinked<T>::findAdd(T* item)
 }
 
 template < class T >
-void SortedListLinked<T>::addRemove(T* item)
-{
-   NextNode<T>* node = new NextNode<T>(item);
-
-   //special case: adding to an empty list
-   if (sze == 0)
-   {
-      head = node;
-      sze++;
-      return;
-   }
-
-   NextNode<T>** nodes = find(item);
-   NextNode<T>* prev = nodes[0];
-   NextNode<T>* curr = nodes[1];
-   delete[] nodes;
-
-   //DO THIS
-   //adding to the top of the list (check prev)
-   if (prev == NULL)
-   {
-	   node->getNext() = head;
-	   head = node;
-   }
-   else    //general add
-   {
-	   prev->setNext(node);
-	   node->setNext(curr);
-   }
-
-   sze++;
-}
-
-template < class T >
-NextNode<T>** SortedListLinked<T>::findAdd(T* item)
+NextNode<T>** SortedListLinked<T>::findRemove(T* item)
 {
    NextNode<T>* prev = NULL;
    NextNode<T>* curr = head;
