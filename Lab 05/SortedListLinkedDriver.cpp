@@ -48,10 +48,11 @@ int main()
          CD* cd = iter->next();
          cd->displayCD();
       }
+   deleteCDs(cds);
    delete iter;
    delete cds;
    delete list;
-   deleteCDs(cds);
+   
 
 
    return 0;
