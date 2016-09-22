@@ -17,8 +17,6 @@ void addCDs(ListArray<CD>* list, SortedListLinked<CD>* sll)
       iter = sll->getNext();
    }
 
-
-
    delete iter;
 }
 
