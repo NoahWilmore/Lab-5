@@ -11,8 +11,11 @@ void addCDs(ListArray<CD>* list, SortedListLinked<CD>* sll)
    ListArrayIterator<CD>* iter = list->iterator();
 
    //DO THIS
-   //iterate over and add the cds to the list box (use lb->addItem)
-   
+   //iterate over and add the cds to the list box
+   while (iter->hasNext())
+   {
+      iter = sll->getNext();
+   }
 
 
 
